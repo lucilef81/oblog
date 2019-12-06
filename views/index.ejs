@@ -1,7 +1,7 @@
 <%- include('partials/header.ejs') %>
 
        <article>
-        <% article.forEach( (article) => { %>
+        <% for (let id in article) { %>
           <%- include('data/article', {article: article}); %>
         <%}); %>
        </article>

@@ -17,7 +17,11 @@ app.get('/', (request, response) => {
  response.render('index.ejs');
 });
 
+
+// mise en place détail d'un article
+
 app.get('/article/:id', (request, response) => {
+  response.send(index.id(request.params.id));
 
 })
 
