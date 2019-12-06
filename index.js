@@ -6,6 +6,10 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.set('view', 'views');
 
+app.get('/', (request, response) => {
+ response.sendFile('integration/index.html', {root: '.'});
+});
+
 
 
 
