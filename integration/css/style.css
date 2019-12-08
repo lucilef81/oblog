@@ -42,6 +42,12 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+main h1 {
+  font-family: 'Lato';
+  margin: 1rem 0;
+  letter-spacing: 0;
+}
+
 h2 {
   font-family: Oclock;
   font-size: 1.8em;

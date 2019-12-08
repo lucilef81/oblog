@@ -1,39 +1,14 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+const ejs = require('ejs')
 
-const article = require('./data/article.json');
-app.locals.article = article;
+const router = require('./modules/router')
 
-
-const port = 3000;
-
-
-app.use(express.static("integration"));
+const app = express()
+const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'ejs');
-app.set('view', 'views');
+app.set('views', 'views');
 
-app.get('/', (request, response) => {
- response.render('index.ejs');
-});
+app.use(router)
 
-
-// mise en place détail d'un article
-
-app.get('/article/:id', (request, response) => {
-  response.send(index.id(request.params.id));
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
